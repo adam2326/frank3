@@ -1,7 +1,7 @@
 application: cloud-training-
-api_version: alpha005
+version: alpha005
 runtime: python27
-version: 1
+api_version: 1
 threadsafe: true
 
 handlers:

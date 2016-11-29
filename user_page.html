@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <!--ensure proper rendering and touch zooming-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!--add content-->
+<body>
+
+<div class="container">
+	<h1>Opportunities: {{ nickname }}  <small><a href="{{ login_logout_url }}">sign out</a></small></h1>
+	<a href="{{ url_for('add_opportunity') }}" class="btn btn-info" role="button">Create New Opportunity</a>
+</div>
+
+
+<!--add space-->
+<br>
+<br>
+<br>
+<!--add space-->
+
+<!--add current opportunities table-->
+<div class="container">
+  <h1>Current</h1>         
+  <table class="table table-striped">
+    <thead>
+      <tr>
+      	<th>Edit</th>
+        <th>Date</th>
+        <th>Client</th>
+        <th>Dollar Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><form><input type="submit" name="edit_opportunity" value="Edit"></form></td>
+        <td>10-31-2016</td>
+        <td>Cleveland Clinic</td>
+        <td>$5,000</td>
+      </tr>
+      <tr>
+        <td><form><input type="submit" name="edit_opportunity" value="Edit"></form></td>
+        <td>05-01-2014</td>
+        <td>Johns Hopkins</td>
+        <td>$10,000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<!--end of page-->
+</body>
+</html>

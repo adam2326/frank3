@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <!--ensure proper rendering and touch zooming-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!--page content-->
+<body>
+
+
+
+<div class="container">
+<form class="form-horizontal" action="{{ url_for('user_summary_page', nickname=nickname) }}" method="post">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Add Opportunity</legend>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Select Unit Name</label>
+  <div class="col-md-4">
+    <select id="selectunitname" name="inp_unit_name" class="form-control">
+      <option value="1">Unit One</option>
+      <option value="2">Unit Two</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="num_units">Number of Units</label>  
+  <div class="col-md-4">
+  <input id="num_units" name="inp_num_units" type="text" placeholder="# Units" class="form-control input-md" required=""> 
+  </div>
+</div>
+
+
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Existing Customer?</label>
+  <div class="col-md-4">
+    <select id="selectexistingcustomer" name="inp_existing_customer" class="form-control">
+      <option value="Y">Yes</option>
+      <option value="N">No</option>
+    </select>
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="start_date">Deal Starting Date</label>  
+  <div class="col-md-4">
+  <input id="start_date" name="inp_start_date" type="text" placeholder="MM-DD-YYY" class="form-control input-md" required="">
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="ae_notes">Notes</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="ae_notes" name="inp_ae_notes">Enter any additional info</textarea>
+  </div>
+</div>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit">Submit</label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+
+</body>
+</html>

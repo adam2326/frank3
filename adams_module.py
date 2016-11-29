@@ -15,10 +15,10 @@ class Employee(ndb.Model):
 # define an opportunity class
 class Opportunity(ndb.Model):
 	entity_creation_date = ndb.DateTimeProperty(auto_now_add=True)
-	opp_start_date = ndb.DateTimeProperty()
+	opp_start_date = ndb.StringProperty()
 	unit_name = ndb.StringProperty()
 	num_units = ndb.IntegerProperty()
-	existing_customer = ndb.BooleanProperty()
+	existing_customer = ndb.StringnProperty()
 	notes = ndb.TextProperty()
 
 

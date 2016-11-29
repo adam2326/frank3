@@ -66,7 +66,7 @@ def user_summary_page(nickname):
 				payload['nickname'] = nickname
 				payload['opp_start_date'] = request.form['inp_start_date']
 				payload['unit_name'] = request.form['inp_unit_name']
-				payload['num_units'] = request.form['inp_num_units']
+				payload['num_units'] = int(request.form['inp_num_units'])
 				payload['existing_customer'] = request.form['inp_existing_customer']
 				payload['notes'] = request.form['inp_ae_notes']
 
